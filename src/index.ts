@@ -8,17 +8,10 @@ const binRE = /\?bin$/
 const HelperModuleID = 'virtual:unplugin-import-bin/helper.ts'
 
 export const unpluginFactory: UnpluginFactory<Options | undefined> = options => {
-  const publicDir: string[] = []
-
   return {
-    name: 'unplugin-starter',
-    vite: {
-      configResolved(config) {
-        publicDir.push(config.publicDir)
-      },
-    },
+    name: 'unplugin-import-bin',
     enforce: 'pre',
-    resolveId(id, importer, options) {
+    resolveId(id, _importer, _options) {
       if (id === HelperModuleID) return HelperModuleID
     },
     loadInclude(id) {
