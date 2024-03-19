@@ -5,7 +5,7 @@ import fsp from 'node:fs/promises'
 
 const binRE = /\?bin$/
 
-const HelperModuleID = '\0virtual:unplugin-import-bin'
+const HelperModuleID = 'virtual:unplugin-import-bin/helper.ts'
 
 export const unpluginFactory: UnpluginFactory<Options | undefined> = options => {
   const publicDir: string[] = []
