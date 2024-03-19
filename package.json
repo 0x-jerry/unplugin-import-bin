@@ -85,6 +85,10 @@
     "start": "esno src/index.ts",
     "test": "vitest"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
   "peerDependencies": {
     "@nuxt/kit": "^3",
     "@nuxt/schema": "^3",
