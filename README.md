@@ -20,11 +20,11 @@ npm i unplugin-import-bin
 
 ```ts
 // vite.config.ts
-import Starter from 'unplugin-import-bin/vite'
+import ImportBin from 'unplugin-import-bin/vite'
 
 export default defineConfig({
   plugins: [
-    Starter({ /* options */ }),
+    ImportBin({ /* options */ }),
   ],
 })
 ```
@@ -38,11 +38,11 @@ Example: [`playground/`](./playground/)
 
 ```ts
 // rollup.config.js
-import Starter from 'unplugin-import-bin/rollup'
+import ImportBin from 'unplugin-import-bin/rollup'
 
 export default {
   plugins: [
-    Starter({ /* options */ }),
+    ImportBin({ /* options */ }),
   ],
 }
 ```
@@ -103,10 +103,10 @@ module.exports = {
 ```ts
 // esbuild.config.js
 import { build } from 'esbuild'
-import Starter from 'unplugin-import-bin/esbuild'
+import ImportBin from 'unplugin-import-bin/esbuild'
 
 build({
-  plugins: [Starter()],
+  plugins: [ImportBin()],
 })
 ```
 
