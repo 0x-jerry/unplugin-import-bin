@@ -4,7 +4,7 @@ Import binary file as array buffer.
 
 ## Usage
 
-```
+```ts
 import buffer from './path/to/file?bin'
 console.log(buffer) // => Uint8Array[...]
 ```
