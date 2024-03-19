@@ -1,18 +1,21 @@
+import fsp from 'node:fs/promises'
 import type { UnpluginFactory } from 'unplugin'
 import { createUnplugin } from 'unplugin'
 import type { Options } from './types'
-import fsp from 'node:fs/promises'
 
 const binRE = /\?bin$/
 
 const HelperModuleID = 'virtual:unplugin-import-bin/helper.ts'
 
-export const unpluginFactory: UnpluginFactory<Options | undefined> = options => {
+export const unpluginFactory: UnpluginFactory<Options | undefined> = (
+  _options,
+) => {
   return {
     name: 'unplugin-import-bin',
     enforce: 'pre',
     resolveId(id, _importer, _options) {
-      if (id === HelperModuleID) return HelperModuleID
+      if (id === HelperModuleID)
+        return HelperModuleID
     },
     loadInclude(id) {
       return binRE.test(id) || id === HelperModuleID
@@ -44,7 +47,6 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = options => 
     },
   }
 }
-
 
 export const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory)
 
