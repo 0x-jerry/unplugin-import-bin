@@ -1,7 +1,7 @@
-import fsp from 'node:fs/promises'
 import type { UnpluginFactory } from 'unplugin'
-import { createUnplugin } from 'unplugin'
 import type { Options } from './types'
+import fsp from 'node:fs/promises'
+import { createUnplugin } from 'unplugin'
 
 const binRE = /\?bin$/
 

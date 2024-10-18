@@ -72,8 +72,8 @@
     }
   },
   "files": [
-    "dist",
-    "*.d.ts"
+    "*.d.ts",
+    "dist"
   ],
   "scripts": {
     "build": "tsup",
@@ -99,7 +99,13 @@
     "webpack": "^4 || ^5"
   },
   "peerDependenciesMeta": {
-    "webpack": {
+    "@nuxt/kit": {
+      "optional": true
+    },
+    "@nuxt/schema": {
+      "optional": true
+    },
+    "esbuild": {
       "optional": true
     },
     "rollup": {
@@ -108,13 +114,7 @@
     "vite": {
       "optional": true
     },
-    "esbuild": {
-      "optional": true
-    },
-    "@nuxt/kit": {
-      "optional": true
-    },
-    "@nuxt/schema": {
+    "webpack": {
       "optional": true
     }
   },
