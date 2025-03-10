@@ -2,7 +2,7 @@
   "name": "unplugin-import-bin",
   "type": "module",
   "version": "0.1.5",
-  "packageManager": "pnpm@9.12.2",
+  "packageManager": "pnpm@9.15.9",
   "description": "",
   "license": "MIT",
   "keywords": [
